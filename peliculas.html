@@ -1,32 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/catalog_p.css">
+    <link rel="stylesheet" href="./CSS/nav.css">
+    <link rel="stylesheet" href="./CSS/peliculas.css">
     <title>CINEFAST</title>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <div class="container-header">
-  <header>
-    <div class="peliculas">
-      <a href="#">CINEFAST</a>
+        <header>
+            <div class="peliculas">
+                <a href="#">CINEFAST</a>
+            </div>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <nav class="nav">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./series.html">Series</a></li>
+                    <li><a href="./peliculas.html">Películas</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
     </div>
-     <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="menu-icon">
-        <i class="fa-solid fa-bars"></i>
-      </label>
-    <nav class="nav">
-      <ul>
-        <li><a href="./index.html">Inicio</a></li>
-        <li><a href="./series.html">Series</a></li>
-        <li><a href="./peliculas.html">Películas</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-    </div>
-    
-    
+
+    <main class="catalogo">
+        <h1>PELÍCULAS</h1>
+        <div class="grid-peliculas">
+            <div class="card">
+                <img src="./IMG/p/1.jpg" alt="Película 1">
+                <h2>Película 1</h2>
+                <p>Descripción breve de la película 1.</p>
+                <button>Ver más</button>
+            </div>
+            <div class="card">
+                <img src="./IMG/p/2.png" alt="Película 2">
+                <h2>Película 2</h2>
+                <p>Descripción breve de la película 2.</p>
+                <button>Ver más</button>
+            </div>
+            <div class="card">
+                <img src="./IMG/p/3.jpg" alt="Película 3">
+                <h2>Película 3</h2>
+                <p>Descripción breve de la película 3.</p>
+                <button>Ver más</button>
+            </div>
+        
+        </div>
+    </main>
 </body>
 </html>
