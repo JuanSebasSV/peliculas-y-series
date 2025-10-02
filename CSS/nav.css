@@ -15,13 +15,13 @@ padding: 15px 60px;
 background-color: black;
 }
 
-.Series a {
+.cinefast a {
     text-decoration: none;
     color: rgb(236, 5, 5);
     font-weight: bold;
     font-size: 24px;
 }
-.container-header header .logo a {
+.container-header header .cinefast a {
 font-family: 'Righteous', cursive;
 font-size: 36px;
 color: #1cb698;

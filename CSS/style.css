@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* NAV */
+.navbar {
+  background: #111;
+  padding: 1rem;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar .activo {
+  color: #e50914;
+}
+
+/* PANTALLA DIVIDIDA */
+.split-screen {
+  display: flex;
+  height: calc(100vh - 70px); /* resta altura del nav */
+}
+
+.split-screen section {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Video de fondo */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  transition: opacity 0.5s;
+  pointer-events: none; /* evita que bloquee el hover */
+}
+
+/* Reproduce al pasar el mouse */
+.bg-video {
+  opacity: 0.3;
+  transition: opacity 0.4s;
+}
+
+section:hover .bg-video {
+  opacity: 0.9;
+}
+
+/* Botones centrales */
+.overlay {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  background: #e50914;
+  border-color: #e50914;
+  transform: scale(1.1);
+}
+
+/* Fondo negro al hacer scroll */
+main {
+  background: #000;
+}
+
+/* Opcional: keyframe para arranque */
+@keyframes playVideo {
+  from { opacity: 0.3; }
+  to { opacity: 0.9; }
+}
