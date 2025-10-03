@@ -13,32 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-/* NAV */
-.navbar {
-  background: #111;
-  padding: 1rem;
-  text-align: center;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s;
-}
-
-.navbar a:hover,
-.navbar .activo {
-  color: #e50914;
-}
-
 /* PANTALLA DIVIDIDA */
 .split-screen {
   display: flex;
