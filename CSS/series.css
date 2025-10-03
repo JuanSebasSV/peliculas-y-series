@@ -1,6 +1,22 @@
 body {
-    background: url(../IMG/fondo_index.jpg);
+    background: 
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+      url(../IMG/fondo_index.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 
+
+.catalog-s  {
+    padding: 120px 100px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+img {
+    height: 500px;
+    width: auto;
+    margin-left: 80px;
+    margin-bottom: 80px;
+}
 
 
