@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Series y Películas</title>
+  <link rel="stylesheet" href="./CSS/nav.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+  <!-- NAV -->
+  <div class="container-header">
+    <header>
+      <div class="cinefast">
+        <a href="#">CINEFAST</a>
+      </div>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <nav class="nav">
+        <ul>
+          <li><a href="./index.html" class="activo">Inicio</a></li>
+          <li><a href="./series.html">Series</a></li>
+          <li><a href="./peliculas.html">Películas</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="split-screen">
+    <section class="left">
+      <video class="bg-video" src="./Videos/peliculas.mp4" muted loop></video>
+      <div class="overlay">
+        <a href="peliculas.html" class="btn">Películas</a>
+      </div>
+    </section>
+
+    <section class="right">
+      <video class="bg-video" src="./Videos/series.mp4" muted loop></video>
+      <div class="overlay">
+        <a href="./Videos/series.mp4" class="btn">Series</a>
+      </div>
+    </section>
+  </main>
+  <script src="./JS/main.js"></script>
+</body>
+</html>
