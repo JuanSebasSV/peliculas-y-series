@@ -1,98 +1,114 @@
+/* nav.css corregido */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Header principal */
 .container-header header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 60px;
-    background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background-color: black;
+  position: relative; /* necesario para el menú absoluto en móvil */
 }
 
-.cinefast a {
-    text-decoration: none;
-    color: rgb(236, 5, 5);
-    font-weight: bold;
-    font-size: 24px;
+/* Ocultar el checkbox (funciona como trigger) */
+#menu-toggle {
+  display: none;
 }
 
-.container-header header .cinefast a {
-    font-size: 24px;
-    color: #be1919;
-    text-decoration: none;
-    font-weight: bold;
+/* Ícono hamburguesa (por defecto oculto en desktop) */
+.menu-icon {
+  font-size: 28px;
+  color: #e50000;
+  cursor: pointer;
+  display: none;
 }
 
-.container-header header ul {
-    display: flex;
-    list-style: none;
+/* Logo y nombre */
+.section-logo a,
+.section-logo h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.section-logo span {
+  color: red;
+  font-size: 30px;
+}
+
+/* Menu horizontal por defecto (desktop) */
+.container-header header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 18px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .container-header header nav ul li a {
-    font-family: 'Righteous', sans-serif;
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    transition: color 0.3s ease;
+  font-family: 'Righteous', sans-serif;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background .12s;
 }
 
 .container-header header nav ul li a:hover {
-    color: #e70c0c;
+  color: #e70c0c;
+  background: rgba(255,255,255,0.03);
 }
 
-/* Botón hamburguesa oculto por defecto */
-.hamburger {
-    display: none;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-}
+/* -------------------
+   Reglas para pantallas pequeñas
+   ------------------- */
+@media (max-width: 768px) {
 
-/* Estilo menú desplegable en móviles/tablets/ventanas reducidas */
-@media (max-width: 1024px) {
-    .container-header header {
-        padding: 15px 20px;
-    }
+  /* Mostrar el icono hamburguesa */
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    z-index: 1000;
+  }
 
-    /* Mostrar botón hamburguesa */
-    .hamburger {
-        display: block;
-    }
+  /* Ocultar el menú horizontal (se mostrará el menú vertical) */
+  .container-header header nav ul {
+    display: none;                /* <- oculto por defecto en móvil */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: calc(100% - 40px);
+    max-width: 320px;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(6px);   /* efecto borroso */
+    border-radius: 12px;
+    padding: 18px;
+    gap: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  }
 
-    /* Ocultar nav inicialmente */
-    .nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(8px);
-        transition: right 0.3s ease-in-out;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
-    }
+  /* Enlaces más grandes en móvil */
+  .container-header header nav ul li a {
+    font-size: 20px;
+    padding: 10px 12px;
+    color: #fff;
+  }
 
-    .nav ul {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .nav ul li a {
-        font-size: 22px;
-        color: white;
-    }
-
-    /* Clase activa abre el menú */
-    .nav.active {
-        right: 0;
-    }
+  /* Mostrar menú cuando el checkbox esté activado */
+  /* INPUT debe estar antes de NAV en el DOM (tu HTML ya lo tiene así) */
+  #menu-toggle:checked ~ nav ul {
+    display: flex;
+  }
 }
