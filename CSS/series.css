@@ -3,20 +3,158 @@ body {
       linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
       url(../IMG/fondo_index.jpg) no-repeat center center fixed;
     background-size: cover;
+    padding: 0;
+    margin: 0;
 }
 
 
-.catalog-s  {
-    padding: 120px 100px;
-    align-items: center;
-    box-sizing: border-box;
+/* contenedor general */
+.catalog-s {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 120px 100px;
+  box-sizing: border-box;
 }
 
-img {
-    height: 500px;
-    width: auto;
-    margin-left: 80px;
-    margin-bottom: 80px;
+/* caja que envuelve cada imagen (no modifica otras cajas) */
+.img-box {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 100px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
 }
+
+/* tamaño de las imágenes (igual que tenías antes, ajusta si quieres) */
+.img-box img {
+  display: block;
+  height: 500px; /* mantén la altura deseada */
+  width: auto;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+  position: relative;
+  z-index: 1;
+  -webkit-user-drag: none;
+}
+
+/* zoom suave al pasar el cursor */
+.img-box:hover img {
+  transform: scale(1.06);
+}
+
+/* overlay con linear-gradient (cubre la imagen) */
+.img-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 20%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0) 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+/* texto (titulo + descripcion) oculto por defecto */
+.info {
+  position: absolute;
+  bottom: 22px;
+  left: 20px;
+  right: 20px;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  z-index: 3;
+  pointer-events: none;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+}
+
+.info p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.25;
+  opacity: 0.95;
+  max-height: 3.3em; /* evita que la descripcion ocupe demasiado */
+  overflow: hidden;
+}
+
+/* mostrar overlay y texto al hover */
+.img-box:hover::after {
+  opacity: 1;
+}
+
+.img-box:hover .info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contenedor de acciones */
+.actions {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+}
+
+.actions i {
+
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+
+/* Like verde */
+.actions i.fa-thumbs-up:hover {
+  color: #4CAF50;
+  transform: scale(1.2);
+}
+
+/* Dislike rojo */
+.actions i.fa-thumbs-down:hover {
+  color: #E53935;
+  transform: scale(1.2);
+}
+
+/* Puntuación */
+.rating {
+  font-size: 16px;
+  color: gold;
+  font-weight: bold;
+}
+
+
+/* responsivo: reduce la altura en pantallas pequeñas */
+@media (max-width: 900px) {
+  .img-box img {
+    height: 420px;
+  }
+}
+
+@media (max-width: 600px) {
+  .catalog-s {
+    padding: 30px 16px;
+    gap: 20px;
+  }
+
+  .img-box img {
+    height: 320px;
+  }
+
+  .info h3 { font-size: 16px; }
+  .info p { font-size: 12px; }
+}
+
+
 
 

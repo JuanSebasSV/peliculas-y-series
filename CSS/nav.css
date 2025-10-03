@@ -15,18 +15,19 @@ padding: 15px 60px;
 background-color: black;
 }
 
-.cinefast a {
-    text-decoration: none;
-    color: rgb(236, 5, 5);
-    font-weight: bold;
-    font-size: 24px;
+/* Logo y nombre */
+.section-logo h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
 }
-.container-header header .cinefast a {
-font-family: 'Righteous', cursive;
-font-size: 36px;
-color: #1cb698;
-text-decoration: none;
+
+.section-logo span {
+  color: red;
+  font-size: 28px;
 }
+
+
 .container-header header ul {
 display: flex;
 list-style: none;
