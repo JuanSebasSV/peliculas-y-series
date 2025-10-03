@@ -6,18 +6,16 @@
   <title>Series y Películas</title>
   <link rel="stylesheet" href="./CSS/nav.css">
   <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./CSS/footer.css">
 </head>
 <body>
   <!-- NAV -->
   <div class="container-header">
     <header>
       <div class="cinefast">
-        <a href="#">CINEFAST</a>
+        <a href="#"><span>CINE</span>FAST</a>
       </div>
-      <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="menu-icon">
-        <i class="fa-solid fa-bars"></i>
-      </label>
       <nav class="nav">
         <ul>
           <li><a href="./index.html" class="activo">Inicio</a></li>
@@ -26,6 +24,7 @@
           <li><a href="./contacto.html">Contacto</a></li>
         </ul>
       </nav>
+      
     </header>
   </div>
 
@@ -37,7 +36,7 @@
         <a href="peliculas.html" class="btn">Películas</a>
       </div>
     </section>
-
+      
     <section class="right">
       <video class="bg-video" src="./Videos/series.mp4" muted loop></video>
       <div class="overlay">
@@ -46,5 +45,48 @@
     </section>
   </main>
   <script src="./JS/main.js"></script>
+  <section class="newsletter">
+    <h2>Suscríbete a nuestro boletín para recibir actualizaciones</h2>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Ingresa tu correo aquí" required>
+      <button type="submit">Suscribirse</button>
+    </form>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+    <!-- Logo y nombre -->
+      <div class="footer-section logo">
+        <h2><span>CINE</span>FAST</h2>
+        <p>Películas y Series Online</p>
+      </div>
+
+    <!-- Sobre nosotros -->
+      <div class="footer-section about">
+        <h3>SOBRE NOSOTROS</h3>
+        <p>
+          Somos una plataforma dedicada a compartir información, reseñas 
+          y recomendaciones de películas y series. 
+        </p>
+        <p>
+          Disfruta de contenido actualizado y de calidad pensado para ti.
+        </p>
+      </div>
+
+    <!-- Redes sociales -->
+      <div class="footer-section social">
+        <h3>SÍGUENOS</h3>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  <!-- Derechos -->
+    <div class="footer-bottom">
+      <p>© 2025 <span>CINEFAST</span> - Todos los Derechos Reservados.</p>
+    </div>
+  </footer>
 </body>
 </html>

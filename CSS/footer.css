@@ -1,0 +1,150 @@
+/* Newsletter */
+.newsletter {
+  background: #0a0f14;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid #222;
+}
+
+.newsletter h2 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Input */
+.newsletter-form input {
+  padding: 12px 15px;
+  border: 2px solid #555;
+  border-radius: 25px;
+  outline: none;
+  width: 280px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: #111;
+  color: #fff;
+}
+
+.newsletter-form input:focus {
+  border-color: #ff1a1a;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+/* Botón */
+.newsletter-form button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #e50914; /* rojo Netflix */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #ff1a1a;
+  transform: scale(1.05);
+}
+
+.newsletter-form button:active {
+  background: #ff4d4d;
+  transform: scale(0.95);
+}
+
+
+.footer {
+  background: #0a0f14;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px 20px;
+}
+
+/* Logo y nombre */
+.footer-section.logo h2 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.footer-section.logo h2 span {
+  color: red;
+}
+
+.footer-section.logo p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Sobre nosotros */
+.footer-section.about h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-section.about p {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+/* Redes sociales */
+.footer-section.social h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #fff;
+  background: #111a22;
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: red;
+  color: #fff;
+}
+
+/* Parte inferior */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #222;
+  padding-top: 12px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-bottom span {
+  color: red;
+  font-weight: bold;
+}

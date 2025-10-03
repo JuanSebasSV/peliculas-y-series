@@ -21,10 +21,18 @@ background-color: black;
   font-weight: bold;
   color: white;
 }
+<<<<<<< HEAD
 
 .section-logo span {
   color: red;
   font-size: 28px;
+=======
+.container-header header .cinefast a {
+font-size: 24px;
+color: #be1919;
+text-decoration: none;
+font-weight: bold;
+>>>>>>> a829763c79142727adf016b221074a9bd610a915
 }
 
 
